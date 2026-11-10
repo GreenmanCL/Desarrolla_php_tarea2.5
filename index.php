@@ -16,6 +16,8 @@
         <h2>Tarea 2.5: (individual)  Página con varias ramas</h2>
         <h3>09/11/26</h3>
         <img src="rinos.png" alt="">
+        <br>
+        <a href="saludos.php">ir a saludos</a>
     </div>
 </body>
 </html>
