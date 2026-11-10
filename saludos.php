@@ -8,27 +8,28 @@
 </head>
 <body>
     <div class = "tope">
-        <h1>🤑¡Hola de nuevo!🦀</h1><br>
+        <h1>🤑¡Hola de nuevo!🦀</h1><br> <!-- saludar nuevamente, clase para estilos -->
     </div>
     <div class="contenido">
         <form action="" method="POST">
             <label for="idioma">Elije un idioma</label>
             <br><br>
-            <select name="idioma" id="idioma" required>
-                    <option value="">-- Selecciona --</option>
-                    <option value="es">Español</option>
-                    <option value="en">Inglés</option>
-                    <option value="fr">Francés</option>
-                    <option value="it">Italiano</option>
-                    <option value="de">Alemán</option>
-                    <option value="ja">Japonés</option>
-                </select>
+            <select name="idioma" id="idioma" required> <!-- boton de opcion multiple -->
+                <option value="">-- Selecciona --</option>
+                <option value="es">Español</option> <!-- el value es lo que regresa al elejir la opcion -->
+                <option value="en">Inglés</option>
+                <option value="fr">Francés</option>
+                <option value="it">Italiano</option>
+                <option value="de">Alemán</option>
+                <option value="ja">Japonés</option>
+            </select>
             <button type="submit" name="calcular">Enviar Respuesta</button>
         </form>
         <?php 
-            if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['calcular']) ) {
+            if( $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['calcular']) ) { // procesar info
                 $idioma = $_POST['idioma'];
                 
+                // dependiendo de lo que regreso el formulario procesar la info 
                 if( $idioma == 'es' )
                     echo "<h2>Hola tio chavalete</h2>";
                 else if( $idioma == 'en' )
@@ -47,6 +48,7 @@
             }
             
         ?>
+        <!-- opciones para volver a donde estabamos -->
         <br><br>
         <a href="#">volver a elegir</a>
         <br>
